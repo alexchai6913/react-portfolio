@@ -1,10 +1,10 @@
 import './App.css';
-import AnimatedButton from './components/AnimatedButton.jsx';
+import Navbar from './components/Navbar.jsx';
 
 function App() {
   return (
     <>
-      <AnimatedButton icon_before="sms" icon_after="arrow_forward" />
+      <Navbar />
     </>
   );
 }

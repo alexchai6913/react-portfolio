@@ -70,11 +70,6 @@ body {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100dvh;
 }
 
 .icon {
@@ -197,6 +192,14 @@ button {
     cursor: pointer;
 }
 
+Lottie::part(loading) {
+    display: none !important;
+}
+
+.lottie-container svg {
+    display: none !important;
+  }
+
 .AnimatedButton {
 
     --button-height: 3rem;
@@ -246,8 +249,8 @@ button {
     align-items: center;
     justify-content: center;
 
-    font-size: 1.2rem;
-    
+    font-size: 1rem;
+
 }
 
 span.icon-before {
@@ -270,9 +273,48 @@ span.icon-after {
     transform: translateX(calc((var(--icon-height) + var(--padding))*-1)) scale(.5);
 }
 
-
 .AnimatedButton:active {
     opacity: 0.8;
     transform: scale(1.05);
     transition: 100ms;
+}
+
+.Navbar {
+    background-color: #555;
+    width: 100vw;
+    padding: .5rem;
+
+    display: flex;
+    gap: 1rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.SocialLinks {
+    height: 100%;
+}
+
+.SocialLinks a {
+    color: white;
+}
+
+.ButtonWrapper {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    gap: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-inline: 1rem;
+
+    gap: 1rem;
 }
