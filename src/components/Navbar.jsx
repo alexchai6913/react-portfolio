@@ -22,12 +22,31 @@ const SocialLinks = () => {
   );
 };
 
+const NavLink = ({ children }) => {
+  return (
+    <a className="NavLink" href="/about">
+      <span className="text">{children}</span>
+      <span className="text-after">{children}</span>
+    </a>
+  );
+};
+
+const NavMenu = ({ props }) => {
+  return (
+    <ul className="NavMenu">
+      <NavLink>About</NavLink>
+      <NavLink>Projects</NavLink>
+      <NavLink>Contact</NavLink>
+    </ul>
+  );
+};
+
 const Navbar = ({ props }) => {
   return (
     <div className="Navbar">
       <div className="container">
         <img src={logo} alt="Logo" style={{ height: "32px" }} />
-
+        <NavMenu />
         <div className="ButtonWrapper">
           <SocialLinks />
           <AnimatedButton icon_before="sms" icon_after="arrow_forward" />
